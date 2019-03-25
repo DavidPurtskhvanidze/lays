@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Lays</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="style/style.css">
+    <script
+            src="http://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="/" class="logo"><img src="img/logo.png" alt="MENU_HOME"></a>
+            <nav class="lang-menu">
+                <a href="/ru" class="lang-menu-btn active">Рус</a>
+                <a href="/kg" class="lang-menu-btn">Кырг</a>
+            </nav>
+        </div>
+    </header>
+    <div class="banner-section-wrap">
+        <section class="banner-section"></section>
+    </div>
+    <div class="taster-section-wrap">
+        <div class="container">
+            <section class="taster-section">
+                <h2 class="title">Вкусы</h2>
+                <div class="taster-col action-movie">
+                    <h4 class="title">Боевики</h4>
+                    <img src="img/pack_cheese.png" alt="Боевики">
+                    <p>Захватывающий вкус! «Суперсыр» удивляет. Возьми этот вкус для просмотра крутых экшн-фильмов и поверь: Lay’s «Суперсыр» точно спасет мир!</p>
+                </div>
+                <div class="taster-col romance-movie">
+                    <h4 class="title">Романтика</h4>
+                    <img src="img/pack_paprika.png" alt="Романтика">
+                    <p>Яркие герои, много драмы и неожиданные сюжетные повороты – такие фильмы нужно смотреть только с Lay’s «Паприка». Пикантный вкус для романтичного кино.</p>
+                </div>
+                <div class="taster-col sci-fi-movie">
+                    <h4 class="title">Sci-Fi</h4>
+                    <img src="img/pack_onion.png" alt="Sci-Fi">
+                    <p>Ароматный Lay’s «Зеленый лук» - то, что нужно для вечера фантастических фильмов. Хватай крутой вкус и собирай друзей: сегодня на экране произойдет что-то невероятное.</p>
+                </div>
+                <div class="taster-col comedy-movie">
+                    <h4 class="title">Комедия</h4>
+                    <img src="img/pack_doner.png" alt="Комедия">
+                    <p>Этот Lay’s создан для комедий! Сочный донер для любителей смешанных вкусов. Бери Lay’s «Донер» и делай звук громче – будет весело.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="promo-section-wrap">
+        <div class="container">
+            <section class="promo-section">
+                <h2 class="title">Акции</h2>
+                <div class="promo-col">
+                    <img src="img/pic_option_1.png" alt="Акция 1">
+                    <p>1. Купи 3 пачки Lays (150гр) в Глобусе</p>
+                </div>
+                <div class="promo-col">
+                    <img src="img/pic_option_1.png" alt="Акция 1">
+                    <p>2. Обменяй чек на сертификат в кино по адресу "из Стоппер 150х840 ру.ai" внизу</p>
+                </div>
+                <div class="promo-col">
+                    <img src="img/pic_option_1.png" alt="Акция 1">
+                    <p>3. Насладись фильмом с Lays!</p>
+                </div>
+            </section>
+        </div>
+        <button id="action-modal-open" class="button"><span>Подробнее</span></button>
+    </div>
+
+    <footer>
+        <a href="/" class="logo"><img src="img/logo.png" alt="MENU_HOME"></a>
+    </footer>
+
+    <div id="popup" class="popup-container">
+        <div class="popup-overlay"></div>
+        <div class="container">
+            <div class="wrap">
+                <div class="popup">
+                    <div id="action-modal-close" class="close-btn"></div>
+                    <h2 class="title">Правила акции от Lay's:</h2>
+                    <div class="popup-content"><p>При покупке в сети <b>«Магнум» 3 упаковок чипсов Lay’s</b> объемом 150
+                        гр в период с <b>14 марта по 26 апреля 2019 года</b> получите на кассе чек с кодом и обменяйте
+                        его в период с 14 марта по 30 апреля 2019 года на 1 билет на любой киносеанс в сети кинотеатров
+                        <b>Chaplin Cinemas</b>, г. Алматы или Астана участвующих в акции. Билеты на киносеанс на VIP
+                        места в акции не участвуют.</p>
+                        <p><b>Внимание:</b> При покупке чипсов в один чек включается не более 3 кодов. В кинотеатрах
+                            можно обменять не более 3-х кодов на билеты в одни руки единовременно.</p>
+                        <p>Участие в акции могут принять лица от 18 лет.</p>
+                        <h3>Адреса кинотеатров, принимающих участие в акции:</h3>
+                        <p><b>Chaplin ADK</b>, г. Алматы, ул. Сатпаева 90, ТРК «ADK», 2 этаж.</p>
+                        <p><b>Chaplin MegaPark</b>, г. Алматы, ул. Макатаева 127, ТРЦ «MEGA Park», 3 этаж.</p>
+                        <p><b>Chaplin MEGA Silk Way</b>, г. Астана, ул. Кабанбай батыра 62, ТРЦ «Mega Silk Way», 2 этаж.
+                        </p>
+                        <p><b>Chaplin Khan Shatyr</b>, г. Астана, проспект Туран 37, ТРЦ «Хан Шатыр», 2 этаж.</p>
+                        <p>По вопросам акции ежедневно с 9:00 до 19:00 по времени Астаны работает телефон горячей линии
+                            <b>8 800 070 7160</b>. Звонки с мобильного бесплатно. Внимание! Все звонки&nbsp;на горячую
+                            линию записываются в целях контроля качества.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $( document ).ready(function() {
+            var body = $('body');
+
+            $('#action-modal-open').on('click', function(){
+                body.addClass('popup-active');
+            });
+            $('#action-modal-close').on('click', function(){
+                body.removeClass('popup-active');
+            });
+        });
+    </script>
+
+</body>
+</html>
