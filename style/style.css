@@ -122,15 +122,24 @@ img {
   display: -ms-flexbox;
   display: flex; }
   .banner-section .left-banner {
-    width: 75.5%;
-    height: 690px;
-    background: url("../img/left_banner_tv.jpg") 100% no-repeat #fdc40c;
+    background: url(../img/left_banner_tv.jpg) no-repeat #fdc40c;
     -webkit-background-size: cover;
-    background-size: cover; }
+    background-size: cover;
+    background-position-x: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 60%;
+    height: 690px; }
   .banner-section .right-banner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
     width: 40%;
     height: 690px;
-    background: url("../img/right_banner_tv.jpg") 0 0 no-repeat #0083d4; }
+    background: url(../img/right_banner_tv.jpg) 0 0 no-repeat #0083d4; }
 
 .taster-section-wrap {
   background: #fad617;
@@ -392,7 +401,8 @@ footer {
     height: 60vh;
     overflow-y: auto;
     display: block;
-    padding-right: 50px; }
+    padding-right: 50px;
+    font-size: 15px; }
   .popup-container .popup {
     background-color: #f7c60b;
     z-index: 2;
@@ -415,6 +425,9 @@ footer {
 body.popup-active .popup-container {
   z-index: 1000;
   display: block; }
+
+.text-center {
+  text-align: center; }
 
 /*==========  Non-Mobile First Method  ==========*/
 /* Large Devices, Wide Screens */
@@ -442,32 +455,26 @@ body.popup-active .popup-container {
     font-size: 16px; }
 
   .banner-section {
-    padding-top: 0;
-    height: auto; }
-    .banner-section:before {
-      background: url(../img/left_banner_tv_mobile.jpg) 50% no-repeat #fdc40c;
+    height: 540px; }
+    .banner-section .left-banner {
+      background: url(../img/left_banner_tv_mobile.jpg) no-repeat #fdc40c;
       -webkit-background-size: cover;
       background-size: cover;
-      background-position: top;
-      height: 800px;
-      width: 100%;
-      display: block;
-      position: relative;
-      left: auto;
-      right: auto;
-      margin: 0; }
-    .banner-section:after {
-      background: url(../img/right_banner_tv_mobile.jpg) 50% no-repeat #fdc40c;
-      -webkit-background-size: cover;
-      background-size: cover;
-      background-position: top;
-      height: 600px;
-      width: 100%;
-      display: block;
-      position: relative;
-      left: auto;
-      right: auto;
-      margin: 0; } }
+      background-position-x: left;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 60%;
+      height: 690px; }
+    .banner-section .right-banner {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 40%;
+      height: 690px;
+      background-size: contain; } }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
   .taster-section-wrap .taster-section .taster-col {
