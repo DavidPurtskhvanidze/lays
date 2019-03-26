@@ -140,64 +140,53 @@ img {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  .left-banner {
-    background: url(../img/left_banner_tv.jpg) no-repeat #fdc40c;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-position-x: left;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 60%;
-    height: 690px;
-  }
-  .right-banner {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 40%;
-    height: 690px;
-    background: url(../img/right_banner_tv.jpg) 0 0 no-repeat #0083d4;
-  }
-  //&:before {
-  //  position: absolute;
-  //  top: 0;
-  //  content: "";
-  //  -webkit-transition: -webkit-transform .4s;
-  //  transition: -webkit-transform .4s;
-  //  -o-transition: .4s transform;
-  //  transition: transform .4s;
-  //  transition: transform .4s,-webkit-transform .4s;
-  //
-  //  width: 75.5%;
-  //  height: 690px;
-  //  background: url("../img/left_banner_tv.jpg") 100% no-repeat #fdc40c;
+
+  //.left-banner {
+  //  background: url(../img/left_banner_tv.jpg) no-repeat #fdc40c;
   //  -webkit-background-size: cover;
   //  background-size: cover;
-  //  right: 50%;
-  //  margin-right: -212px;
-  //  -webkit-transform-origin: 75% 50%;
-  //  -ms-transform-origin: 75% 50%;
-  //  transform-origin: 75% 50%;
-  //}
-  //&:after {
+  //  background-position-x: left;
   //  position: absolute;
   //  top: 0;
-  //  content: "";
-  //  -webkit-transition: -webkit-transform .4s;
-  //  transition: -webkit-transform .4s;
-  //  -o-transition: .4s transform;
-  //  transition: transform .4s;
-  //  transition: transform .4s,-webkit-transform .4s;
-  //
-  //  width: 40%;
+  //  left: 0;
+  //  bottom: 0;
+  //  width: 70%;
   //  height: 690px;
-  //  background: url("../img/right_banner_tv.jpg") 0 0 no-repeat #0083d4;
-  //  left: 50%;
-  //  margin-left: 212px
   //}
+  //.right-banner {
+  //  position: absolute;
+  //  top: 0;
+  //  right: 0;
+  //  bottom: 0;
+  //  width: 30%;
+  //  height: 690px;
+  //  background: url(../img/right_banner_tv.jpg) 0 0 no-repeat #0083d4;
+  //}
+  &:hover {
+    &:after {
+      cursor: pointer;
+    }
+  }
+  &:before {
+    position: absolute;
+    top: 0;
+    content: "";
+    width: 70%;
+    height: 690px;
+    background: url("../img/left_banner_tv.jpg") 100% no-repeat #fdc40c;
+    -webkit-background-size: cover;
+    background-size: cover;
+    left: 0;
+  }
+  &:after {
+    position: absolute;
+    top: 0;
+    content: "";
+    width: 30%;
+    height: 690px;
+    background: url("../img/right_banner_tv.jpg") 0 0 no-repeat #0083d4;
+    right: 0;
+  }
 }
 
 .taster-section-wrap {
@@ -540,7 +529,17 @@ body.popup-active .popup-container {
 
 
 /*==========  Non-Mobile First Method  ==========*/
-
+@media only screen and (max-width : 1440px) {
+  .banner-section {
+    height: 690px;
+    &:before {
+      background-position: 20%;
+    }
+    &:after {
+      width: 40%;
+    }
+  }
+}
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 992px) {
   .main-header {
@@ -548,6 +547,21 @@ body.popup-active .popup-container {
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
+  }
+
+  @media only screen and (max-width : 1440px) {
+    .banner-section {
+      height: 690px;
+      &:before {
+        background: url(../img/left_banner_tv_mobile.jpg);
+        width: 50%;
+        background-position: 50%;
+        background-size: cover;
+      }
+      &:after {
+        width: 50%;
+      }
+    }
   }
 
   .taster-section-wrap .taster-section .title,
@@ -567,30 +581,31 @@ body.popup-active .popup-container {
     font-size: 16px;
   }
 
-  .banner-section {
-    height: 540px;
-    .left-banner {
-      background: url(../img/left_banner_tv_mobile.jpg) no-repeat #fdc40c;
-      -webkit-background-size: cover;
-      background-size: cover;
-      background-position-x: left;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      width: 60%;
-      height: 690px;
-    }
-    .right-banner {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      width: 40%;
-      height: 690px;
-      background-size: contain;
-    }
-  }
+  //.banner-section {
+  //  height: 540px;
+  //  .left-banner {
+  //    background: url(../img/left_banner_tv_mobile.jpg) no-repeat #fdc40c;
+  //    -webkit-background-size: cover;
+  //    background-size: cover;
+  //    background-position-x: left;
+  //    position: absolute;
+  //    top: 0;
+  //    left: 0;
+  //    bottom: 0;
+  //    width: 60%;
+  //    height: 690px;
+  //  }
+  //  .right-banner {
+  //    position: absolute;
+  //    top: 0;
+  //    right: 0;
+  //    bottom: 0;
+  //    width: 40%;
+  //    height: 690px;
+  //    background-size: contain;
+  //  }
+  //}
+
 }
 
 /* Small Devices, Tablets */
@@ -606,6 +621,24 @@ body.popup-active .popup-container {
   }
   .promo-section-wrap .promo-section .promo-col {
     padding: 20px 20px 34px;
+  }
+
+  @media only screen and (max-width : 1440px) {
+    .banner-section {
+      height: auto;
+      flex-direction: column;
+      &:before {
+        position: static;
+        background: url(../img/left_banner_tv_mobile.jpg);
+        width: 100%;
+        background-position: 50%;
+        background-size: cover;
+      }
+      &:after {
+        position: static;
+        width: 100%;
+      }
+    }
   }
 }
 

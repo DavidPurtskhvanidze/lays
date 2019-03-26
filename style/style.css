@@ -121,25 +121,26 @@ img {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
-  .banner-section .left-banner {
-    background: url(../img/left_banner_tv.jpg) no-repeat #fdc40c;
+  .banner-section:hover:after {
+    cursor: pointer; }
+  .banner-section:before {
+    position: absolute;
+    top: 0;
+    content: "";
+    width: 70%;
+    height: 690px;
+    background: url("../img/left_banner_tv.jpg") 100% no-repeat #fdc40c;
     -webkit-background-size: cover;
     background-size: cover;
-    background-position-x: left;
+    left: 0; }
+  .banner-section:after {
     position: absolute;
     top: 0;
-    left: 0;
-    bottom: 0;
-    width: 60%;
-    height: 690px; }
-  .banner-section .right-banner {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 40%;
+    content: "";
+    width: 30%;
     height: 690px;
-    background: url(../img/right_banner_tv.jpg) 0 0 no-repeat #0083d4; }
+    background: url("../img/right_banner_tv.jpg") 0 0 no-repeat #0083d4;
+    right: 0; }
 
 .taster-section-wrap {
   background: #fad617;
@@ -430,14 +431,31 @@ body.popup-active .popup-container {
   text-align: center; }
 
 /*==========  Non-Mobile First Method  ==========*/
+@media only screen and (max-width: 1440px) {
+  .banner-section {
+    height: 690px; }
+    .banner-section:before {
+      background-position: 20%; }
+    .banner-section:after {
+      width: 40%; } }
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 992px) {
   .main-header {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
-    justify-content: flex-start; }
-
+    justify-content: flex-start; } }
+@media only screen and (max-width: 992px) and (max-width: 1440px) {
+  .banner-section {
+    height: 690px; }
+    .banner-section:before {
+      background: url(../img/left_banner_tv_mobile.jpg);
+      width: 50%;
+      background-position: 50%;
+      background-size: cover; }
+    .banner-section:after {
+      width: 50%; } }
+@media only screen and (max-width: 992px) {
   .taster-section-wrap .taster-section .title,
   .promo-section-wrap .promo-section .title {
     font-size: 39px; }
@@ -452,29 +470,7 @@ body.popup-active .popup-container {
     padding: 30px 40px 34px; }
 
   .promo-section-wrap .promo-section .promo-col p {
-    font-size: 16px; }
-
-  .banner-section {
-    height: 540px; }
-    .banner-section .left-banner {
-      background: url(../img/left_banner_tv_mobile.jpg) no-repeat #fdc40c;
-      -webkit-background-size: cover;
-      background-size: cover;
-      background-position-x: left;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      width: 60%;
-      height: 690px; }
-    .banner-section .right-banner {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      width: 40%;
-      height: 690px;
-      background-size: contain; } }
+    font-size: 16px; } }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
   .taster-section-wrap .taster-section .taster-col {
@@ -488,6 +484,19 @@ body.popup-active .popup-container {
 
   .promo-section-wrap .promo-section .promo-col {
     padding: 20px 20px 34px; } }
+@media only screen and (max-width: 768px) and (max-width: 1440px) {
+  .banner-section {
+    height: auto;
+    flex-direction: column; }
+    .banner-section:before {
+      position: static;
+      background: url(../img/left_banner_tv_mobile.jpg);
+      width: 100%;
+      background-position: 50%;
+      background-size: cover; }
+    .banner-section:after {
+      position: static;
+      width: 100%; } }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
   .main-header {
